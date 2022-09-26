@@ -1,18 +1,21 @@
 import os
 import urllib.request as request
 from zipfile import ZipFile
-from deepClassifier.entity.config_entity import DataIngestionConfig
+from deepClassifier.entity import DataIngestionConfig
+from deepClassifier import logger
 
 class DataIngestion:
     def __init__(self, config: DataIngestionConfig):
         self.config = config
 
     def download_file(self):
+        logger.info(f"Trying to download file.......")
         if not os.path.exists(self.config.local_data_file):
             filename, headers = request.urlretrieve(
                 url = self.config.source_URL,
                 filename = self.config.local_data_file
             )
+            logging.info(f"{filename} download! with following info: {headers}")
 
     def _get_updated_list_of_files(self, list_of_files):
         return [f for f in list_of_files if f.endswith(".jpg") and ("Cat" in f or "Dog" in f)]
