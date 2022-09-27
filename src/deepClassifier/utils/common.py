@@ -49,7 +49,10 @@ def save_json(path:Path,data:dict):
         path (Path): path to json file
         data (dict): data to be saved in json file
     """
-    pass
+    with open(path,"w") as f:
+        json.dump(data,f,indent=4)
+    logger.info(f"json file saved at: {path}")
+
 
 @ensure_annotations 
 def load_json(path:Path)->ConfigBox:
@@ -59,7 +62,11 @@ def load_json(path:Path)->ConfigBox:
     Returns:
         ConfigBox: data as class attributes instead of dict
     """
-    pass 
+    with open(path) as f:
+        content = json.load(f)
+    
+    logger.info(f"json file loaded successfully from: {path}")
+    return ConfigBox(content)
 
 @ensure_annotations
 def save_bin(data:Any,path:Path):
@@ -68,7 +75,8 @@ def save_bin(data:Any,path:Path):
         data (Any): data to be saved as binary
         path (Path): path to binary file
     """
-    pass
+    joblib.dump(value=data,filename=path)
+    logger.info(f"Binary file saved at : {path}")
 
 @ensure_annotations
 def load_bin(path:Path)->Any:
@@ -78,7 +86,9 @@ def load_bin(path:Path)->Any:
     Returns:
         Any: object stored in the file
     """
-    pass 
+    data = joblib.load(path)
+    logger.info(f"Binary file loaded from : {path}")
+    return data 
 
 @ensure_annotations
 def get_size(path:Path)->str:
