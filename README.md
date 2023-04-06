@@ -18,5 +18,7 @@ step-8 => Fill the requirements.txt the packages which are useful for production
 
 step-9 => Fill the tox.ini file to create test environments
 
+step-10 => Create environments using init_setup files
+
 
 
