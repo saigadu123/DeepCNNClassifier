@@ -52,6 +52,9 @@ step-12 => Add logger to the deepClassifier package in __init__.py file
 11. run "dvc repro" for running all the stages in pipeline
 
 
+![img]()
+
+
 
 
 
