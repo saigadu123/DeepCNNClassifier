@@ -133,6 +133,6 @@ dmypy.json
 .vscode/
 *.zip
 *.jpg
-artifacts/
+artifacts
 
 
