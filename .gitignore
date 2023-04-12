@@ -110,6 +110,9 @@ ENV/
 env.bak/
 venv.bak/
 krishna/
+gorantla/
+saikrishna/
+hello/
 
 # Spyder project settings
 .spyderproject
