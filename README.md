@@ -68,7 +68,7 @@ In this case path_to_log_directory = artifacts/prepare_callbacks/tensorboard_log
 
 1. dvc init (To initialize the dvc)
 
-2. dvc repro
+2. dvc repro (To run the pipeline)
 
 
 
