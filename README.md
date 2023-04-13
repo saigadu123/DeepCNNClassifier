@@ -64,6 +64,15 @@ python -m tensorboard.main --logdir=path_to_log_directory
 In this case path_to_log_directory = artifacts/prepare_callbacks/tensorboard_log_dir/
 
 
+# DVC(Data Version Control)
+
+1. dvc init (To initialize the dvc)
+
+2. dvc repro
+
+
+
+
 
 
 
