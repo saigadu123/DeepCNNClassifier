@@ -138,5 +138,7 @@ dmypy.json
 *.jpg
 artifacts/prepare_base_model/base_model.h5
 artifacts/prepare_base_model/base_model_updated.h5
-
-
+artifacts/prepare_callbacks/checkpoint_dir/model.h5
+artifacts/training/model.h5
+artifacts/prepare_callbacks/tensorboard_log_dir/tb_logs_at_2023-04-13-09-31-51/train/events.out.tfevents.1681358523.DESKTOP-D093V92.3572.0.v2
+artifacts/prepare_callbacks/tensorboard_log_dir/tb_logs_at_2023-04-13-09-31-51/validation/events.out.tfevents.1681361350.DESKTOP-D093V92.3572.1.v2

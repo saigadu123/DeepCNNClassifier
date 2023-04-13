@@ -57,5 +57,14 @@ step-12 => Add logger to the deepClassifier package in __init__.py file
 
 
 
+## After training the model to check the tensorboard use the command
+
+python -m tensorboard.main --logdir=path_to_log_directory
+
+In this case path_to_log_directory = artifacts/prepare_callbacks/tensorboard_log_dir/
+
+
+
+
 
 
