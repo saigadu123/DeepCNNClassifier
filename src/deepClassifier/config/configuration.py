@@ -6,6 +6,7 @@ from pathlib import Path
 import os
 from deepClassifier.entity import PrepareCallbacksConfig
 from deepClassifier.entity import TrainingConfig
+from deepClassifier.entity import EvaluationConfig
 
 class ConfigurationManager:
     def __init__(
@@ -81,3 +82,12 @@ class ConfigurationManager:
         )
 
         return training_config
+    
+    def get_evaluation_config(self)->EvaluationConfig:
+        eval_config = EvaluationConfig(
+            path_of_model = Path(self.config.training.trained_model_path),
+            training_data = Path(self.config.data_ingestion.unzip_dir),
+            params_image_size = self.params.IMAGE_SIZE,
+            params_batch_size = self.params.BATCH_SIZE
+        )
+        return eval_config
