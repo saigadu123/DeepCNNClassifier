@@ -72,8 +72,20 @@ In this case path_to_log_directory = artifacts/prepare_callbacks/tensorboard_log
 
 
 
+MLFLOW_TRACKING_URI=https://dagshub.com/saigadu123/DeepCNNClassifier.mlflow \
+MLFLOW_TRACKING_USERNAME=saigadu123 \
+MLFLOW_TRACKING_PASSWORD=bccea19a008f0ae53e36f39d62e73e9c58465616 \
+python script.py
 
+mlflow server \
+--backend-store-uri sqlite:///mlflow.db \
+--default-artifact-root ./artifacts \
+--host 127.0.0.1 -p 8080
 
+MLFLOW_TRACKING_URI=https://dagshub.com/saigadu123/DeepCNNClassifier.mlflow \
+MLFLOW_TRACKING_USERNAME=saigadu123 \
+MLFLOW_TRACKING_PASSWORD=bccea19a008f0ae53e36f39d62e73e9c58465616 \
+python script.py
 
 
 
