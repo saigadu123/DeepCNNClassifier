@@ -16,6 +16,8 @@ import logging
 logging.basicConfig(level=logging.WARN)
 logger = logging.getLogger(__name__)
 
+import dagshub
+dagshub.init(repo_name="DeepCNNClassifier", repo_owner="saigadu123")
 
 def eval_metrics(actual, pred):
     rmse = np.sqrt(mean_squared_error(actual, pred))
@@ -30,7 +32,7 @@ if __name__ == "__main__":
 
     # Read the wine-quality csv file from the URL
     csv_url = (
-        "https://raw.githubusercontent.com/saigadu123/wine_dataset/master/winequality-red.csv?token=GHSAT0AAAAAACAILDB7NWLMZDN4BQTGYRLAZB34R4A"
+        "https://raw.githubusercontent.com/saigadu123/wine_dataset/master/winequality-red.csv?token=GHSAT0AAAAAACAILDB7HXXPFSF3JBX6ALHIZB5CAFQ"
     )
     try:
         data = pd.read_csv(csv_url, sep=";")
