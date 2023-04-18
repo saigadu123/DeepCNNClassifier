@@ -91,6 +91,16 @@ step-3: set remote URI
 
 step-4: Use context manager of mlflow to start run and then log metrics, params and model
 
+# Building the docker Image
+
+command-1 : docker build -t pred_service . (To build the Image)
+
+command-2 : docker images (To check the existing images)
+
+command-3 : docker run -p 8501:8501 pred_service(Image name) => (To run the docker image)
+
+
+
 
 
 
